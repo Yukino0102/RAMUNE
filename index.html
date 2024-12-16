@@ -2,22 +2,48 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <title>今日のラッキーカラー</title>
-    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" 
+    <title>今日のラッキーカラー</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .card {
+            border: 1px solid #ccc;
+            border-radius: 10px;
+            padding: 20px;
+            display: inline-block;
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        .color-box {
+            width: 100px;
+            height: 100px;
+            margin: 20px auto;
+            border-radius: 10px;
+        }
+    </style>
 </head>
 <body>
+
     <h1>今日のラッキーカラー</h1>
-    <button onclick="generateLuckyColor()">ラッキーカラーを生成</button>
-    <div id="colorDisplay"></div>
+    <div class="card">
+        <div id="colorBox" class="color-box"></div>
+        <p id="colorName">色名がここに表示されます</p>
+        <button onclick="generateLuckyColor()">ラッキーカラーを生成</button>
+    </div>
 
     <script>
         function generateLuckyColor() {
-            const colors = ['赤', '青', '緑', '黄色', '紫', 'オレンジ', 'ピンク', '茶色', '黒', '白'];
-            const randomIndex = Math.floor(Math.random() * colors.length);
-            const luckyColor = colors[randomIndex];
-            document.getElementById('colorDisplay').innerText = `今日のラッキーカラーは: {luckyColor}`;
-        }
-    </script>
-</body>
-</html>
+            const colors = [
+                { name: "赤", hex: "#FF0000" },
+                { name: "青", hex: "#0000FF" },
+                { name: "緑", hex: "#00FF00" },
+                { name: "黄色", hex: "#FFFF00" },
+                { name: "紫", hex: "#800080" },
+                { name: "オレンジ", hex: "#FFA500" },
+                { name: "ピンク", hex: "#FFC0CB" }
+            ];
+            const randomColor = colors[Math.floor(Math.random() * colors.length)];
+            document.getElementById("colorBox").style.backgroundColor
