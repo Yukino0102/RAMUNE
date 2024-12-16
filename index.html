@@ -4,7 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <title>今日のラッキーカラー</title>
-   
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #colorDisplay {
+            font-size: 24px;
+            margin-top: 20px;
+            padding: 10px;
+            border: 2px solid #000;
+            display: inline-block;
+        }
+    </style>
 </head>
 <body>
     <h1>今日のラッキーカラー</h1>
@@ -16,9 +29,8 @@
             const colors = ['赤', '青', '緑', '黄色', '紫', 'オレンジ', 'ピンク', '茶色', '黒', '白'];
             const randomIndex = Math.floor(Math.random() * colors.length);
             const luckyColor = colors[randomIndex];
-            document.getElementById('colorDisplay').innerText = `今日のラッキーカラーは: {'赤', '青', 
+            document.getElementById('colorDisplay').innerText = `今日のラッキーカラーは: ${luckyColor}`;
+        }
+    </script>
 </body>
 </html>
-    
-
-    
