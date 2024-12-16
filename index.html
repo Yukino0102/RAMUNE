@@ -13,7 +13,7 @@
 
     <script>
         function generateLuckyColor() {
-            const colors = ['シルバー','ゴールド','黄緑','赤', '青', '緑', '黄色', '紫', 'オレンジ', 'ピンク', '茶色', '黒', '白'];
+            const colors = ['赤', '青', '緑', '黄色', '紫', 'オレンジ', 'ピンク', '茶色', '黒', '白'];
             const randomIndex = Math.floor(Math.random() * colors.length);
             const luckyColor = colors[randomIndex];
             document.getElementById('colorDisplay').innerText = `今日のラッキーカラーは: {luckyColor}`;
