@@ -3,9 +3,10 @@ function showFortune() {
     const resultDiv = document.getElementById("result");
 
     const fortunes = {
-       result = "凶";
+       result = "ふたご座";
             } else if (colour === 
-        "ふたご座": "コミュニケーションが鍵。",&& number === 0) {   "おひつじ座": "今日は新しい挑戦をしてみよう。",
+        "ふたご座": "コミュニケーションが鍵。",&& number === 0) {   
+    "おひつじ座": "今日は新しい挑戦をしてみよう。",
         "おうし座": "安定した日。",
         "ふたご座": "コミュニケーションが鍵。",
         "かに座": "感情が高まる日。",
