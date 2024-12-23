@@ -1,28 +1,18 @@
-function showFortune() {
-    const zodiacInput = document.getElementById("zodiac").value;
-    const resultDiv = document.getElementById("result");
+document.getElementById('showItemButton').addEventListener('click', function() {
+    const items = [
+        '赤い靴',
+        '星の形のペンダント',
+        '緑色のノート',
+        '青いマグカップ',
+        '黄色い花束'
+    ];
+    
+    // ランダムにアイテムを選ぶ
+    const randomIndex = Math.floor(Math.random() * items.length);
+    const luckyItem = items[randomIndex];
 
-    const fortunes = {
-       result = "ふたご座";
-            } else if (colour === 
-        "ふたご座": "コミュニケーションが鍵。",&& number === 0) {   
-    "おひつじ座": "今日は新しい挑戦をしてみよう。",
-        "おうし座": "安定した日。",
-        "ふたご座": "コミュニケーションが鍵。",
-        "かに座": "感情が高まる日。",
-        "しし座": "自分を表現するチャンス。",
-        "おとめ座": "細かい作業がはかどる日。",
-        "てんびん座": "新しい出会いに期待。",
-        "さそり座": "直感が冴える日。",
-        "いて座": "冒険してみよう。",
-        "みずがめ座": "忘れ物に注意。"
-    };
-
-    const fortune = fortunes[zodiacInput];
-
-    if (fortune) {
-        resultDiv.textContent = fortune;
-    } else {
-        resultDiv.textContent = "星座名が正しくありません。";
-    }
-}
+    // アイテムを表示
+    const luckyItemDiv = document.getElementById('luckyItem');
+    luckyItemDiv.textContent = `今日のラッキーアイテムは「${luckyItem}」です！`;
+    luckyItemDiv.style.display = 'block';
+});
