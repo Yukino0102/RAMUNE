@@ -1,27 +1,25 @@
-        function checkFortune() {
-            var colour = document.getElementById('colour-select').value;
-            var number = parseInt(document.getElementById('number-input').value, 10);
-            var result = "凶"; // デフォルトの値
+function showFortune() {
+    const zodiacInput = document.getElementById("zodiac").value;
+    const resultDiv = document.getElementById("result");
 
-            if (colour === "黒" && number === 0) {
-                result = "小吉";
-            } else if (colour === "黒" && number === 1) {
-                result = "中吉";
-            } else if (colour === "黒" && number === 2) {
-                result = "凶";
-            } else if (colour === "白" && number === 0) {
-                result = "中吉";
-            } else if (colour === "白" && number === 1) {
-                result = "中吉";
-            } else if (colour === "白" && number === 2) {
-                result = "大凶";
-            } else if (colour === "オレンジ" && number === 0) {
-                result = "凶";
-            } else if (colour === "オレンジ" && number === 1) {
-                result = "大吉";
-            } else if (colour === "オレンジ" && number === 2) {
-                result = "中吉";
-            }
+    const fortunes = {
+        "おひつじ座": "今日は新しい挑戦をしてみよう。",
+        "おうし座": "安定した日。",
+        "ふたご座": "コミュニケーションが鍵。",
+        "かに座": "感情が高まる日。",
+        "しし座": "自分を表現するチャンス。",
+        "おとめ座": "細かい作業がはかどる日。",
+        "てんびん座": "新しい出会いに期待。",
+        "さそり座": "直感が冴える日。",
+        "いて座": "冒険してみよう。",
+        "みずがめ座": "忘れ物に注意。"
+    };
 
-            document.getElementById('result-output').innerText = "あなたの今週の運勢は【" + result + "】です";
-        }
+    const fortune = fortunes[zodiacInput];
+
+    if (fortune) {
+        resultDiv.textContent = fortune;
+    } else {
+        resultDiv.textContent = "星座名が正しくありません。";
+    }
+}
