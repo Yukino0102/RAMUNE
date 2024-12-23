@@ -3,53 +3,34 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" 
-    <title>今日の星座別運勢</title>
+    <title>今日の12星座別運勢</title>
     <style>
         body {
             font-family: Arial, sans-serif;
-            background-color: #f0f0f0;
-            margin: 0;
-            padding: 20px;
+            margin: 20px;
         }
-        h1 {
-            text-align: center;
-            color: #333;
-        }
-        .horoscope {
-            background-color: #fff;
-            border-radius: 5px;
-            padding: 15px;
-            margin: 10px 0;
-            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        }
-        .sign {
+        #result {
+            margin-top: 20px;
             font-weight: bold;
-            font-size: 1.2em;
         }
     </style>
 </head>
 <body>
+    <h1>今日の12星座別運勢</h1>
+    <label for="zodiac">星座を入力してください（例: おひつじ座）:</label>
+    <input type="text" id="zodiac" placeholder="星座名を入力">
+    <button onclick="showFortune()">運勢を表示</button>
 
-    <h1>今日の星座別運勢</h1>
+    <div id="result"></div>
 
-    <div class="horoscope">
-        <div class="sign">おひつじ座</div>
-        <p>今日は新しい挑戦が吉。自信を持って行動しましょう。</p>
-    </div>
-
-    <div class="horoscope">
-        <div class="sign">おうし座</div>
-        <p>安定した一日。周囲とのコミュニケーションを大切に。</p>
-    </div>
-
-    <div class="horoscope">
-        <div class="sign">ふたご座</div>
-        <p>好奇心が高まる日。新しい知識を得るチャンス。</p>
-    </div>
-
-    <div class="horoscope">
-        <div class="sign">かに座</div>
-        <p>感情が豊かになる日。大切な人との時間を楽しんで。</p>
-    </div>
-
-    <div class="hor
+    <script>
+        const fortunes = {
+            "おひつじ座": "今日は新しい挑戦が吉。自信を持って進んでください。",
+            "おうし座": "安定した日。周囲との調和を大切に。",
+            "ふたご座": "コミュニケーションが鍵。友人との会話を楽しんで。",
+            "かに座": "感情が高まる日。大切な人と過ごす時間を大切に。",
+            "しし座": "自分を表現するチャンス。アートや趣味に挑戦して。",
+            "おとめ座": "細かい作業がはかどる日。整理整頓を心がけて。",
+            "てんびん座": "人間関係が活発になる日。新しい出会いに期待。",
+            "さそり座": "直感が冴える日。自分の感情に正直に。",
+            "いて座": "冒険心
