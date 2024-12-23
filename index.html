@@ -3,37 +3,22 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0" 
-    <title>今日の12星座別運勢</title>
+    <title>今日のラッキーアイテム</title>
+    <script src="acc.js" defer></script>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 20px;
-        }
-        #result {
+        #luckyItem {
+            display: none;
             margin-top: 20px;
-            font-weight: bold;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            background-color: #f9f9f9;
         }
     </style>
 </head>
 <body>
-    <h1>今日の12星座別運勢</h1>
-    <label for="zodiac">星座を入力してください（例: おひつじ座）:</label>
-    <input type="text" id="zodiac" placeholder="星座名を入力">
-    <button onclick="showFortune()">運勢を表示</button>
-
-    <div id="result"></div>
-
-    <script>
-        const fortunes = {
-            "おひつじ座": "今日は新しい挑戦をしてみよう。",
-            "おうし座": "安定した日。",
-            "ふたご座": "コミュニケーションが鍵。",
-            "かに座": "感情が高まる日。",
-            "しし座": "自分を表現するチャンス。",
-            "おとめ座": "細かい作業がはかどる日。",
-            "てんびん座": "新しい出会いに期待。",
-            "さそり座": "直感が冴える日。",
-            "いて座": "冒険してみよう。
-            "みずがめ座"忘れ物に注意。
-
-         
+    <h1>今日のラッキーアイテム</h1>
+    <button id="showItemButton">ラッキーアイテムを表示</button>
+    <div id="luckyItem"></div>
+</body>
+</html>
