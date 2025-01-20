@@ -4,36 +4,24 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>今日のラッキーアイテム</title>
-    <style>
-        body {
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin-top: 50px;
-        }
-        #item {
-            margin-top: 20px;
-            font-size: 24px;
-            font-weight: bold;
-        }
-    </style>
 </head>
 <body>
     <h1>今日のラッキーアイテム</h1>
-    <button onclick="showLuckyItem()">ラッキーアイテムを表示</button>
+    <button onclick="アイテムを表示()">ラッキーアイテムを表示</button>
     <div id="item"></div>
 
     <script>
-        const items = [
+        const アイテムリスト = [
             "星のペンダント",
             "幸運のコイン",
             "ラッキーストーン",
             "虹のブレスレット",
             "金運アップの財布"
         ];
-
-        function showLuckyItem() {
-            const randomIndex = Math.floor(Math.random() * items.length);
-            document.getElementById("item").innerText = items[randomIndex];
+        
+        function アイテムを表示() {
+            const ランダムなインデックス = Math.floor(Math.random() * アイテムリスト.length);
+            document.getElementById("item").innerText = アイテムリスト[ランダムなインデックス];
         }
     </script>
 </body>
