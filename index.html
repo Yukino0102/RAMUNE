@@ -2,23 +2,39 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>今日のラッキーアイテム</title>
-    <script src="acc.js" defer></script>
     <style>
-        #luckyItem {
-            display: none;
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        #item {
             margin-top: 20px;
-            padding: 10px;
-            border: 1px solid #ccc;
-            border-radius: 5px;
-            background-color: #f9f9f9;
+            font-size: 24px;
+            font-weight: bold;
         }
     </style>
 </head>
 <body>
     <h1>今日のラッキーアイテム</h1>
-    <button id="showItemButton">ラッキーアイテムを表示</button>
-    <div id="luckyItem"></div>
+    <button onclick="showLuckyItem()">ラッキーアイテムを表示</button>
+    <div id="item"></div>
+
+    <script>
+        const items = [
+            "星のペンダント",
+            "幸運のコイン",
+            "ラッキーストーン",
+            "虹のブレスレット",
+            "金運アップの財布"
+        ];
+
+        function showLuckyItem() {
+            const randomIndex = Math.floor(Math.random() * items.length);
+            document.getElementById("item").innerText = items[randomIndex];
+        }
+    </script>
 </body>
-</html
+</html>
