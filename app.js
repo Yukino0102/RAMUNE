@@ -1,18 +1,18 @@
-document.getElementById('showItemButton').addEventListener('click', function() {
-    const items = [
-        '赤い靴',
-        '星の形のペンダント',
-        '緑色のノート',
-        '青いマグカップ',
-        '黄色い花束'
-    ];
-    
-    // ランダムにアイテムを選ぶ
-    const randomIndex = Math.floor(Math.random() * items.length);
-    const luckyItem = items[randomIndex];
+const アイテムリスト = [
+    "星のペンダント",
+    "幸運のコイン",
+    "ラッキーストーン",
+    "虹のブレスレット",
+    "金運アップの財布"
+];
 
-    // アイテムを表示
-    const luckyItemDiv = document.getElementById('luckyItem');
-    luckyItemDiv.textContent = `今日のラッキーアイテムは「${luckyItem}」です！`;
-    luckyItemDiv.style.display = 'block';
-});
+function アイテムを表示() {
+    const ランダムなインデックス = Math.floor(Math.random() * アイテムリスト.length);
+    const アイテム要素 = document.getElementById("item");
+    
+    // ラッキーアイテムを表示
+    アイテム要素.innerText = アイテムリスト[ランダムなインデックス];
+    
+    // スタイルを変更してピンク色にする
+    アイテム要素.style.color = "pink";
+}
