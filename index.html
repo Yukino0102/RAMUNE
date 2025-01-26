@@ -20,12 +20,12 @@
             "金運アップの財布"
         ];
         
-        function アイテムを表示() {
-            const ランダムなインデックス = Math.floor(Math.random() * アイテムリスト.length);
-            document.getElementById("item").innerText = アイテムリスト[ランダムなインデックス];
-        }
-        itemDiv.classList.add("pink"); // ピンク色のクラスを追加
-        }
+     function アイテムを表示() {
+    const ランダムなインデックス = Math.floor(Math.random() * アイテムリスト.length);
+    const itemDiv = document.getElementById("item"); // itemDivを取得
+    itemDiv.innerText = アイテムリスト[ランダムなインデックス];
+    itemDiv.classList.add("pink"); // ピンク色のクラスを追加
+}
     </script>
 </body>
 </html>
